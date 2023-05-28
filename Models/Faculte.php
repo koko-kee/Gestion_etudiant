@@ -3,6 +3,6 @@ namespace Models;
 
 class Faculte extends Model
 {
-    protected $table = "faculter";
+    protected $table = "faculte";
 }
 

@@ -43,6 +43,7 @@ $router->map('POST', '/Gestion/faculte/edit/[i:id]', 'Controllers\FaculteControl
 /**
  * Route for a Module
  */
+
 $router->map('GET', '/Gestion/modules', 'Controllers\ModuleController#index' );
 $router->map('GET', '/Gestion/module/create', 'Controllers\ModuleController#create');
 $router->map('POST', '/Gestion/module/create', 'Controllers\ModuleController#store');
@@ -54,12 +55,12 @@ $router->map('POST', '/Gestion/module/edit/[i:id]', 'Controllers\ModuleControlle
 /**
  * Route for a Departement
  */
-$router->map('GET', '/Gestion/professeurs', 'Controllers\TeacherController#index' );
-$router->map('GET', '/Gestion/professeur/create', 'Controllers\TeacherController#create');
-$router->map('POST', '/Gestion/professeur/create', 'Controllers\TeacherController#store');
-$router->map('GET', '/Gestion/professeur/delete/[i:id]', 'Controllers\TeacherController#remove');
-$router->map('GET', '/Gestion/professeur/edit/[i:id]', 'Controllers\TeacherController#edit');
-$router->map('POST', '/Gestion/professeur/edit/[i:id]', 'Controllers\TeacherController#update');
+$router->map('GET', '/Gestion/departements', 'Controllers\departementController#index' );
+$router->map('GET', '/Gestion/departement/create', 'Controllers\departementController#create');
+$router->map('POST', '/Gestion/departement/create', 'Controllers\departementController#store');
+$router->map('GET', '/Gestion/departement/delete/[i:id]', 'Controllers\departementController#remove');
+$router->map('GET', '/Gestion/departement/edit/[i:id]', 'Controllers\departementController#edit');
+$router->map('POST', '/Gestion/departement/edit/[i:id]', 'Controllers\departementController#update');
 
 
 $router->run();

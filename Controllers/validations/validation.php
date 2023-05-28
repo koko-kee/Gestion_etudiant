@@ -32,7 +32,7 @@ class validation extends Controller
                               if (empty($postValue)) {
 
                                    $lower = strtolower($postKey);
-                                    $errors[$key] = "Le champ $lower est requis";
+                                   $errors[$key] = "Le champ $lower est requis";
                               }
                            } else {
 

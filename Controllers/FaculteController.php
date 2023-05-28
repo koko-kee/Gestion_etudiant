@@ -31,14 +31,16 @@ class FaculteController extends Controller
 
         $validate = new validation($_POST,[
 
+            "Nom" => ["min:2","required"],
+            "Description" => ["min:10","required"]
         ]);
         
         if(!$validate->validate()){
-            header('location:/Gestion/Faculte/create');
+            header('location:/Gestion/faculte/create');
             exit();
         }
         $this->faculte->create($_POST);
-        header('location:/Gestion/Faculte/create');
+        header('location:/Gestion/faculte/create');
     }
 
     public function edit(int $id)
@@ -52,6 +54,8 @@ class FaculteController extends Controller
         $data  = $_POST;
         $validate = new validation($data,[
             
+            "Nom" => ["min:2","required"],
+            "description" => ["min:10","required"]
         ]);
         
         if(!$validate->validate()){

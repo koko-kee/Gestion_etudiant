@@ -336,8 +336,8 @@
             </a>
             <div class="collapse" id="charts">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="#">Nouveau Depart</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Departement</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Gestion/departement/create">Nouveau Depart</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Gestion/departements">Departement</a></li>
               </ul>
             </div>
           </li>
@@ -349,8 +349,8 @@
             </a>
             <div class="collapse" id="tables">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href=#"">Nouveau Module</a></li>
-                <li class="nav-item"> <a class="nav-link" href=#"">Module</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/Gestion/module/create">Nouveau Module</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/Gestion/modules">Module</a></li>
               </ul>
             </div>
           </li>
@@ -362,8 +362,8 @@
             </a>
             <div class="collapse" id="icons">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="#">Nouveau Faculte</a></li>
-                <li class="nav-item"> <a class="nav-link" href="#">Faculter</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/Gestion/faculte/create">Nouveau Faculte</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/Gestion/facultes">Faculter</a></li>
               </ul>
             </div>
           </li>

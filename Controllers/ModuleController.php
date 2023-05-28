@@ -22,6 +22,7 @@ class ModuleController extends Controller
 
     public function create()
     {
+
         return $this->View('Module/create');
     }
 
@@ -31,6 +32,8 @@ class ModuleController extends Controller
 
         $validate = new validation($_POST,[
 
+            "Nom" => ["min:2","required"],
+            "description" => ["min:10","required"]
         ]);
         
         if(!$validate->validate()){
@@ -52,6 +55,8 @@ class ModuleController extends Controller
         $data  = $_POST;
         $validate = new validation($data,[
             
+            "Nom" => ["min:2","required"],
+            "description" => ["min:10","required"]
         ]);
         
         if(!$validate->validate()){
@@ -64,7 +69,7 @@ class ModuleController extends Controller
 
     public function remove(int $id)
     {
-        $this->module->delete($id,"CodeF");
+        $this->module->delete($id,"CodeM");
         header('location:/Gestion/modules');
     }
 }

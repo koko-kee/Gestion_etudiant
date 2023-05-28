@@ -2,7 +2,7 @@
 <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h1>Tableau Etudiants </h1>
+                  <h1>Tableau des departements </h1>
                   <div class="table-responsive pt-3">
                     <table class="table table-bordered">
                       <thead>
@@ -14,28 +14,34 @@
                             Nom
                           </th>
                           <th>
-                           Description
+                           Capacite
+                          </th>
+                          <th>
+                            Faculte
                           </th>
                           <th>
                             Actions
                           </th>
                         </tr>
                       </thead>
-                      <?php foreach($params['modules'] as $module):?>
+                      <?php foreach($params['departements'] as $departement):?>
                         <tbody>
                         <tr>
                           <td>
-                            <?=$module->CodeM?>
+                            <?=$departement->NumD?>
                           </td>
                           <td>
-                          <?=$module->Nom?>
+                          <?=$departement->Nom?>
                           </td>
                           <td>
-                          <?=$module->description?>
+                          <?=$departement->Capacite?>
+                          </td>
+                          <td>
+                           <?= $departement->showFaculty($departement->CodeF)->Nom ?>
                           </td>
                            <td style="display: flex;justify-content:space-around;">
-                            <a href="/Gestion/module/delete/<?=$module->CodeM?>"><i style="color: red;"  class="fas fa-trash"></i></a>
-                            <a href="/Gestion/module/edit/<?=$module->CodeM?>"><i style="color:dimgrey;" class="fas fa-pen"></i></a>
+                            <a href="/Gestion/departement/delete/<?=$departement->NumD?>"><i style="color: red;"  class="fas fa-trash"></i></a>
+                            <a href="/Gestion/departement/edit/<?=$departement->NumD?>"><i style="color:dimgrey;" class="fas fa-pen"></i></a>
                           </td>
                         </tr>
                        </tbody>
