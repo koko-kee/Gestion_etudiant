@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-
 <div class="col-12 grid-margin stretch-card">
   <div class="card">
     <div class="card-body">
@@ -9,8 +8,8 @@ session_start();
       <h1 style="text-align:center">Modification</h1>
       <form action="/Gestion/etudiant/edit/<?=$params['student']->Matricule?>" method="post" class="forms-sample">
     <?php else : ?>
-      <!-- <h1 style="text-align:center">Nouveau Etudiant</h1>
-      <form action="/Gestion/etudiant/create" method="post" class="forms-sample"> -->
+      <h1 style="text-align:center">Nouveau Etudiant</h1>
+      <form action="/Gestion/etudiant/create" method="post" class="forms-sample">
     <?php endif; ?>
       <div class="form-group">
         <label for="exampleInputName1">Nom</label>
@@ -45,8 +44,8 @@ session_start();
       </div>
 
       <div class="form-group">
-        <label for="exampleInputCity1">Date Naissance</label>
-        <input type="date" name="Naissance" value="<?php echo isset($params['student']->Naissance) ? $params['student']->Naissance : ''; ?>" class="form-control <?php echo isset($_SESSION['message']['Naissance']) ? 'is-invalid' : ''; ?>" id="exampleInputCity1" placeholder="Date Naissance">
+        <label for="exampleInputPassword4">Naissance</label>
+        <input name="Naissance" type="date" class="form-control <?php echo isset($_SESSION['message']['Naissance']) ? 'is-invalid' : ''; ?>" value="<?php echo isset($params['student']->Naissance) ? $params['student']->Naissance : ''; ?>" id="exampleInputPassword4" placeholder="Naissance">
         <?php if (isset($_SESSION['message']['Naissance'])) : ?>
           <div class="invalid-feedback"><?php echo htmlspecialchars($_SESSION['message']['Naissance']); ?></div>
         <?php endif; ?>

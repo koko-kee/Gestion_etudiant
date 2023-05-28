@@ -1,3 +1,3 @@
 <?php 
-require VIEWS . "Form".DIRECTORY_SEPARATOR."form.teacher.php" ;
+require VIEWS . "Form".DIRECTORY_SEPARATOR."from.teacher.php" ;
 ?>

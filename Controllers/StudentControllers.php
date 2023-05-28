@@ -39,13 +39,14 @@ class StudentControllers  extends Controller
 
     public function store()
     {
-        $data  = $_POST;
-        $validate = new validation($data,[
+
+        $validate = new validation($_POST,[
+
             "Nom" => ["min:2","required"],
             "Prenom" => ["min:2","required"],
             "Adresse" => ["min:5","required"],
             "Lieu" => ["required"],
-            "Date_de_Naissance" => ["required"],
+            "Naissance" => ["required"],
             "Sexe" => ["required"],
             "Diplome" => ["required"],
             "NumD" => ["required"]
@@ -55,7 +56,7 @@ class StudentControllers  extends Controller
             header('location:/Gestion/etudiant/create');
             exit();
         }
-        $this->students->create($data);
+        $this->students->create($_POST);
         header('location:/Gestion/etudiant/create');
     }
 
@@ -91,6 +92,6 @@ class StudentControllers  extends Controller
     public function remove(int $id)
     {
         $this->students->delete($id,"Matricule");
-        header('location:/Gestion/etudiant');
+        header('location:/Gestion/etudiants');
     }
 }

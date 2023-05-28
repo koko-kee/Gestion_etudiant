@@ -311,7 +311,7 @@
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="/Gestion/etudiant/create">Nouveau Etudiant</a></li>
-                <li class="nav-item"> <a class="nav-link" href="/Gestion/etudiant">Etudiants</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/Gestion/etudiants">Etudiants</a></li>
               </ul>
             </div>
           </li>
@@ -323,8 +323,8 @@
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="#">Nouveau Prof</a></li>
-                <li class="nav-item"><a class="nav-link" href="/Gestion/professeur">Professeurs</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Gestion/professeur/create">Nouveau Prof</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Gestion/professeurs">Professeurs</a></li>
               </ul>
             </div>
           </li>

@@ -21,13 +21,20 @@ class Controller
 
     }
 
-    public  function  View ($path , $params = null)
+    protected  function  View ($path , $params = null)
     {
         ob_start();
         require VIEWS. $path .".php";
         $content = ob_get_clean();
         require VIEWS . "Layout.php";
     }
+
+
+    public static function not_found()
+    {
+        require VIEWS."Error/404.php";
+    }
+
 
     
 }

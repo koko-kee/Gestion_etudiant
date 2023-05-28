@@ -94,4 +94,13 @@ abstract class Model   extends dbConnexion
         return $this->requette("SELECT * FROM {$this->table} WHERE $name = ? ",[$id],false);
     }
 
+    public function findOrFail(int $id , string $name = 'id')
+    {
+        $result = $this->requette("SELECT $name FROM {$this->table} WHERE $name = ? ",[$id],false);
+        if(empty($result)){
+            require VIEWS."Error/404.php";
+        }
+        
+    }
+
 }
