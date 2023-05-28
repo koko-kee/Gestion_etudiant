@@ -1,0 +1,20 @@
+{
+    "name": "kone3/gestion_etudiant",
+    "autoload": {
+        "psr-4": {
+            "Routes\\" : "Routes/",
+            "Models\\" : "Models/",
+            "Database\\" : "Database/",
+            "Controllers\\" : "Controllers/",
+            "Kone3\\GestionEtudiant\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "codeur"
+        }
+    ],
+    "require": {
+        "altorouter/altorouter": "^2.0"
+    }
+}
