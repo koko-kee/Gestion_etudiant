@@ -3,8 +3,9 @@
 namespace Controllers;
 
 use Models\Student;
-use Controllers\validations\validation;
+use Renderer\Renderer;
 use Models\Departement;
+use Controllers\validations\validation;
 
 class StudentControllers  extends Controller
 {
@@ -24,9 +25,9 @@ class StudentControllers  extends Controller
         return $this->View('welcome');
     }
 
-    public function index()
+    public function index(int $id = null)
     {
-        $students = $this->students->all();
+        $students = $this->students->Paginate(5,$id);
         return $this->View('Etudiants/index',compact('students'));
     }
 
@@ -71,6 +72,7 @@ class StudentControllers  extends Controller
     {
         $data  = $_POST;
         $validate = new validation($data,[
+            
             "Nom" => ["min:2","required"],
             "Prenom" => ["min:2","required"],
             "Adresse" => ["min:3","required"],

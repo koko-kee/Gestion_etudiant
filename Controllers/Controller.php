@@ -11,7 +11,6 @@ class Controller
     public function __construct()
     {
         
-
         if (session_status() === PHP_SESSION_NONE){
             
             session_start();
@@ -30,11 +29,9 @@ class Controller
     }
 
 
-    public static function not_found()
+    protected static function not_found()
     {
         require VIEWS."Error/404.php";
     }
 
-
-    
 }

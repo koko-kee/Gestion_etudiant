@@ -14,6 +14,4 @@ class FlashMessage
     {
         $_SESSION['flash_messages'] = $message;
     }
-    
-
 }

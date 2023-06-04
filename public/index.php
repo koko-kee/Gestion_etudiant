@@ -13,6 +13,7 @@ $router = new Route();
  */
 $router->map('GET', '/', 'Controllers\StudentControllers#welcome' );
 $router->map('GET', '/Gestion/etudiants', 'Controllers\StudentControllers#index' );
+$router->map('GET', '/Gestion/etudiants/page/[i:id]', 'Controllers\StudentControllers#index' );
 $router->map('GET', '/Gestion/etudiant/create', 'Controllers\StudentControllers#create');
 $router->map('POST', '/Gestion/etudiant/create', 'Controllers\StudentControllers#store');
 $router->map('GET', '/Gestion/etudiant/delete/[i:id]', 'Controllers\StudentControllers#remove');
@@ -23,6 +24,7 @@ $router->map('GET', '/Gestion/etudiant/edit/[i:id]', 'Controllers\StudentControl
  * Route for a teacher
  */
 $router->map('GET', '/Gestion/professeurs', 'Controllers\TeacherController#index' );
+$router->map('GET', '/Gestion/professeurs/page/[i:id]', 'Controllers\TeacherController#index');
 $router->map('GET', '/Gestion/professeur/create', 'Controllers\TeacherController#create');
 $router->map('POST', '/Gestion/professeur/create', 'Controllers\TeacherController#store');
 $router->map('GET', '/Gestion/professeur/delete/[i:id]', 'Controllers\TeacherController#remove');

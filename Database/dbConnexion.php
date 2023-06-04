@@ -11,7 +11,7 @@ abstract class dbConnexion extends PDO
     private $dbname = "gestion_ecole";
     private $password = "";
     private $username = "root";
-    protected $pdo ;
+    private  $pdo = null ;
 
 
     public function __construct()
@@ -25,6 +25,7 @@ abstract class dbConnexion extends PDO
 
     protected function getPDO()
     {
+
         return $this->pdo;
     }
 

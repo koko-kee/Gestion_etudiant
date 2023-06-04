@@ -10,6 +10,7 @@ class ComposerStaticInitfcd326c88d022b6ba45ba57de59ec2fc
         'R' => 
         array (
             'Routes\\' => 7,
+            'Renderer\\' => 9,
         ),
         'M' => 
         array (
@@ -33,6 +34,10 @@ class ComposerStaticInitfcd326c88d022b6ba45ba57de59ec2fc
         'Routes\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Routes',
+        ),
+        'Renderer\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Renderer',
         ),
         'Models\\' => 
         array (

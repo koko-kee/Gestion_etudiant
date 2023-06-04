@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Routes\\' => array($baseDir . '/Routes'),
+    'Renderer\\' => array($baseDir . '/Renderer'),
     'Models\\' => array($baseDir . '/Models'),
     'Kone3\\GestionEtudiant\\' => array($baseDir . '/src'),
     'Database\\' => array($baseDir . '/Database'),

@@ -6,7 +6,9 @@
             "Models\\" : "Models/",
             "Database\\" : "Database/",
             "Controllers\\" : "Controllers/",
-            "Kone3\\GestionEtudiant\\": "src/"
+            "Kone3\\GestionEtudiant\\": "src/",
+            "Renderer\\" : "Renderer/",
+            "Test\\" : "Test/"
         }
     },
     "authors": [

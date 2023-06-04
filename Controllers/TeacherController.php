@@ -16,9 +16,9 @@ class TeacherController extends Controller
     }
 
 
-    public function index() 
+    public function index(int $id = null) 
     {
-        $teachers = $this->teacher->all();
+        $teachers = $this->teacher->Paginate(5,$id);
         return  $this->View('Teachers/index',compact('teachers'));
     }
 
